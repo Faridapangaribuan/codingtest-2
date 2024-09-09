@@ -1,20 +1,10 @@
-function reverseAndTimeArray(arr) {
- 
-    if (arr.length === 0) return [];
-    
-
-    let reversedArr = arr.slice().reverse();
-
-
-    let resultArr = reversedArr.map((_, i) => 
-        reversedArr.reduce((sum, value, index) => 
-            sum + (index <= i ? value : 0), 0)
-    );
-    
+function reverseAndMultiply(arr) {
+    let reversedArr = arr.reverse();
+    let resultArr = reversedArr.map(num => num * 2);
     return resultArr;
 }
 
-console.log(reverseAndTimeArray([1, 4, 6, 7]));
-console.log(reverseAndTimeArray([7, 4, 2, 1])); 
-console.log(reverseAndTimeArray([5]));          
-console.log(reverseAndTimeArray([1, 3]));       
+console.log(reverseAndMultiply([1, 4, 6, 7]));
+console.log(reverseAndMultiply([7, 4, 2, 1]));
+console.log(reverseAndMultiply([5]));
+console.log(reverseAndMultiply([1, 3]));
